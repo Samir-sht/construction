@@ -1,0 +1,2376 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --textcolor: #040e27;
+  --background: #000033;
+  --green: #00b359;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+}
+/* navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  left: 0px;
+  z-index: 100;
+  height: 70px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+/* sticky navbar */
+.sticky {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  transition: all 0.1s;
+  height: 70px;
+  width: 100%;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sticky ul a {
+  color: var(--green);
+}
+
+nav.sticky .logo .company-logo {
+  margin-left: 10px;
+}
+nav.sticky .logo .company-logo img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+nav.sticky .logo .company-logo h1 {
+  position: absolute;
+  top: 7px;
+  left: 70px;
+  width: 300px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.sticky .navbar-toggle i {
+  color: var(--green);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/* sticky navbar end */
+
+nav .logo .company-logo img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+nav .logo .company-logo h1 {
+  position: absolute;
+  top: 7px;
+  left: 70px;
+  width: 350px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 10px;
+  color: #fff;
+  margin-right: 10px;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid var(--green);
+  cursor: pointer;
+}
+nav .navbar-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 15px;
+}
+
+nav ul .closebtn {
+  visibility: hidden;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+  z-index: 99;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--background);
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#myBtn i {
+  font-size: 14px;
+}
+
+#myBtn:hover {
+  background-color: var(--green);
+}
+
+/*video css*/
+.trailer {
+  z-index: 10000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.trailer.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.trailer iframe {
+  max-width: 900px;
+  outline: none;
+}
+
+.trailer .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  font-size: 70px;
+  font-weight: normal;
+  color: #fff;
+}
+
+/*slider*/
+.slider {
+  height: 100vh;
+  width: 100%;
+}
+
+.slider .swiper-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.slider .swiper-container .swiper-slide .bg {
+  height: 100vh;
+  width: 100%;
+  background: url("images/banner/banner2.png"), no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info {
+  display: block;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+
+  margin-bottom: 0px;
+  color: #fff;
+
+  text-align: center;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info a {
+  background: var(--background);
+  color: #fff;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.6s;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+}
+
+.slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info a:hover {
+  cursor: pointer;
+  background: var(--green);
+}
+
+/*about*/
+.About-us {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-top: 50px;
+}
+
+.About-us .container {
+  width: 100%;
+  height: auto;
+  padding: 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.About-us .container .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.About-us .container .about-container .about-img {
+  padding: 10px 0px 10px 150px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+.About-us .container .about-container .about-img img {
+  object-fit: cover;
+  max-width: 80%;
+}
+
+.About-us .container .about-container .about-info {
+  width: 50%;
+  padding: 0px 40px 0p 0px;
+}
+
+.About-us .container .about-container .about-info h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #040e27;
+
+  margin-bottom: 10px;
+}
+
+.About-us .container .about-container .about-info p.two {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--textcolor);
+  margin-bottom: 10px;
+}
+
+.About-us .container .about-container .about-info a {
+  background: var(--background);
+  color: #fff;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.6s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.About-us .container .about-container .about-info a:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+/*portfolio*/
+.portfolio {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio .portfolio-area {
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+  padding: 0px 15px;
+  width: 100%;
+}
+
+.portfolio .portfolio-area h1 {
+  font-size: 30px;
+  font-weight: 600;
+  /* line-height: 40px; */
+}
+
+.portfolio .portfolio-projects {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.portfolio .portfolio-projects .project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.portfolio .portfolio-projects .project-gallery .project-img {
+  height: 300px;
+  width: 350px;
+  position: relative;
+  margin: 0px 5px 5px 0px;
+}
+
+.portfolio .portfolio-projects img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.portfolio .portfolio-projects .project-gallery .project-img:hover {
+  transform: scale(0.95);
+  transition: 0.6s;
+}
+.portfolio .portfolio-projects .project-gallery .project-img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.portfolio .portfolio-projects .project-gallery .project-img .overlay:hover {
+  transition: 0.6s;
+  opacity: 1;
+}
+.portfolio .portfolio-projects .project-gallery .project-img .overlay .links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio .portfolio-projects .project-gallery .project-img .overlay .links a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  background-color: var(--background);
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio
+  .portfolio-projects
+  .project-gallery
+  .project-img
+  .overlay
+  .links
+  a:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+.portfolio .load {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: var(--background);
+  display: inline-block;
+  padding: 15px 20px;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  margin: 20px 0px 35px 0px;
+  transition: 0.6s;
+
+  text-align: center;
+}
+
+.portfolio .load:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+/*homepage team section*/
+.team {
+  height: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.team .container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0px;
+  color: var(--textcolor);
+}
+
+.team .team-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 20px;
+  height: auto;
+}
+
+.team .team-info .team-profile {
+  width: 300px;
+  height: auto;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.team .team-info .member-info img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team .team-info .member-info {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.team .team-info .member-info h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--textcolor);
+}
+
+.team .team-info .member-info p {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 0px;
+  color: var(--textcolor);
+}
+.team a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: var(--background);
+  display: inline-block;
+  padding: 15px 30px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin-top: 35px;
+  text-transform: uppercase;
+  transition: 0.6s;
+}
+.team a:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+/*homepage team end*/
+/*contact banner*/
+.banner {
+  height: auto;
+  width: 100%;
+}
+
+.banner .container {
+  background: url("images/banner/contact.png"), no-repeat, center;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+}
+.banner .container .bg-shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 350px;
+}
+
+.banner .container .bg-shadow h1 {
+  font-size: 25px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.banner .container .bg-shadow a {
+  background: var(--background);
+  color: #fff;
+  /* display: inline-block; */
+  padding: 15px 30px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 0px;
+  text-align: left;
+  text-transform: uppercase;
+  transition: 0.6s;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.banner .container .bg-shadow a:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+/*footer*/
+footer {
+  height: auto;
+  width: 100%;
+  background: var(--background);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 15px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0px 0px;
+}
+
+footer .container .about {
+  max-width: 50%;
+  padding: 10px 30px;
+}
+
+footer .container .about h1 {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 0px;
+  font-weight: 600;
+}
+
+footer .container .about p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+footer .container .about .social-icons i {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px 20px 0px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.6s;
+}
+
+footer .container .about .social-icons i:hover {
+  color: var(--green);
+  cursor: pointer;
+}
+
+footer .container .links {
+  max-width: 40%;
+  padding: 10px 20px;
+  margin-left: 0px;
+}
+
+footer .container .links h1 {
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 0px;
+  font-weight: 600;
+}
+footer .container .links li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+footer .container .links li a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 5px;
+  width: 100%;
+  line-height: 30px;
+  transition: 0.6s;
+}
+
+footer .container .links li a:hover {
+  color: var(--green);
+  cursor: pointer;
+}
+
+footer h6.counter {
+  font-size: 14px;
+  color: #fff;
+
+  margin: 75px 5px 5px 5px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  text-align: left;
+  color: #fff;
+  padding: 5px 0px;
+}
+
+/*About us section*/
+.about-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.about-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.about-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.about-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.about-info {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-top: 30px;
+}
+
+.about-info .container {
+  width: 100%;
+  height: auto;
+  padding: 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-info .container .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.about-info .container .about-container .about-img {
+  padding: 10px 0px 10px 150px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+.about-info .container .about-container .about-img img {
+  object-fit: cover;
+  max-width: 80%;
+}
+
+.about-info .container .about-container .about-info {
+  width: 50%;
+  padding: 0px 40px 0px 0px;
+}
+
+.about-info .container .about-container .about-info h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #040e27;
+
+  margin-bottom: 10px;
+}
+
+.about-info .container .about-container .about-info p.two {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--textcolor);
+  margin-bottom: 10px;
+}
+
+.about-info .container .about-container .about-info a {
+  background: var(--background);
+  color: #fff;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.6s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.about-info .container .about-container .about-info a:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+.features {
+  height: auto;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.features .heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.features .boxes {
+  display: block;
+  padding: 10px 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features .boxes .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.features .boxes .box .box-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px 20px;
+}
+
+.features .boxes .box .box-info i {
+  font-size: 40px;
+  display: block;
+  text-align: center;
+  padding: 20px 0px;
+  color: var(--green);
+}
+
+.features .boxes .box .box-info h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.features .boxes .box .box-info p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-align: center;
+}
+.features .boxes .box .box-info a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: var(--background);
+  display: inline-block;
+  padding: 15px 30px;
+
+  color: #fff;
+  margin-top: 25px;
+  text-transform: uppercase;
+  transition: 0.6s;
+}
+.features .boxes .box .box-info label {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.choose-us {
+  height: auto;
+  width: 100%;
+}
+.choose-us .heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px 0px;
+}
+
+.choose-us .container {
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  margin: 0px auto;
+}
+
+.choose-us .container .choose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.choose-us .container .choose-container .choose-points {
+  width: 50%;
+  margin: 0px 10px;
+}
+.choose-us .container .choose-container .img {
+  display: block;
+  text-align: end;
+  margin: 0px 10px;
+  width: 50%;
+  object-fit: cover;
+}
+
+.choose-us .container .choose-container .choose-points h1 {
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.choose-us .container .choose-container .choose-points p {
+  font-size: 16px;
+  padding: 0px 20px;
+  font-weight: normal;
+}
+
+/*Project Portfolio*/
+
+.portfolio-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.portfolio-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.portfolio-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.portfolio-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.portfolio-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.portfolio-gallery {
+  height: auto;
+  width: 100%;
+}
+
+.portfolio-gallery .heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 30px 0px;
+}
+
+.portfolio-gallery .gallery {
+  display: block;
+  margin: 0px auto;
+  padding: 0px 30px;
+  padding-bottom: 30px;
+}
+
+.portfolio-gallery .gallery .gallery-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio-gallery .gallery .gallery-box .gallery-container {
+  position: relative;
+  margin: 0px 10px 5px 0px;
+  width: 30%;
+}
+
+.portfolio-gallery .gallery .gallery-box .gallery-container img {
+  width: 100%;
+}
+
+.portfolio-gallery .gallery .gallery-box .gallery-container .overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 70%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-gallery .gallery .gallery-box .gallery-container .overlay p {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  color: #fff;
+}
+.portfolio-gallery .gallery .gallery-box .gallery-container .overlay a {
+  background: var(--background);
+  color: #fff;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.6s;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+}
+
+/*team section*/
+.team-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.team-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.team-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.team-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.team-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+#team-profile {
+  height: auto;
+  width: 100%;
+}
+#team-profile .info {
+  display: block;
+  padding: 0px 40px;
+  margin: 30px 0 80px 0px;
+}
+
+#team-profile h1 {
+  font-size: 28px;
+  padding: 10px 0px 10px 30px;
+  text-align: start;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+#team-profile .info p.one,
+#team-profile .info p.two,
+#team-profile .info p.three {
+  font-size: 14px;
+  padding: 5px 30px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#team-profile .team-info {
+  display: block;
+  padding: 0px 40px;
+  margin-top: 20px;
+}
+#team-profile .team-info p.one,
+#team-profile .team-info p.two,
+#team-profile .team-info p.three {
+  font-size: 14px;
+  padding: 10px 30px;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+#team-profile .team-details {
+  height: auto;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#team-profile .team-details .team-members .member-info {
+  height: 350px;
+  width: 300px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+#team-profile .team-details .team-members img {
+  height: 100%;
+  width: 100%;
+}
+#team-profile .team-details .team-members .member-info .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#team-profile .team-details .team-members .member-info .overlay .info {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+}
+
+#team-profile .team-details .team-members .member-info .overlay .info h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0px;
+}
+
+#team-profile .team-details .team-members .member-info .overlay .info p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/*end of team section*/
+
+/*career section*/
+.career-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.career-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.career-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.career-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.career-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.career {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+.career .info {
+  display: block;
+  padding: 0px 40px;
+  margin: 20px 0px 60px 0px;
+}
+
+.career h1 {
+  font-size: 28px;
+  padding: 10px 0px 20px 30px;
+  text-align: start;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.career .info p.one,
+.career p.two,
+.career p.three {
+  font-size: 14px;
+  padding: 8px 30px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.vacancy {
+  height: auto;
+  width: 100%;
+}
+.vacancy .info {
+  display: block;
+  padding: 0px 40px;
+}
+.vacancy h1 {
+  font-size: 28px;
+  padding: 20px 0px 0px 30px;
+  text-align: start;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.vacancy .info p.one {
+  font-size: 16px;
+  padding: 10px 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.vacancy .vacancies {
+  height: auto;
+  width: 100%;
+}
+.vacancy .vacancies .vacancy-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+}
+.vacancy .vacancies .vacancy-info .container {
+  height: 150px;
+  width: 300px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.vacancy .vacancies .vacancy-info .container h1 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+  text-align: center;
+  line-height: 40px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.vacancy .vacancies .vacancy-info .container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.vacancy .vacancies .vacancy-info .container a {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  background: var(--green);
+  line-height: 40px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+.vacancy .vacancies .vacancy-info .container a:hover {
+  color: var(--textcolor);
+  cursor: pointer;
+}
+
+/*career vacancy part*/
+.vacancy-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.vacancy-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.vacancy-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vacancy-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.vacancy-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.vacancy-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.vacancy-details {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+.vacancy-details .info {
+  display: block;
+  padding: 0px 40px;
+}
+
+.vacancy-details h1 {
+  font-size: 28px;
+  padding: 10px 0px 10px 30px;
+  text-align: start;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.vacancy-details .info p.one,
+.vacancy-details .info p.two {
+  font-size: 16px;
+  padding: 10px 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.vacancy-infos {
+  height: auto;
+  width: 100%;
+  padding: 20px 40px;
+}
+.vacancy-infos h1 {
+  font-size: 28px;
+  padding: 10px 0px 10px 30px;
+  text-align: start;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.vacancy-infos .info p,
+.vacancy-infos .info-1 p,
+.vacancy-infos .info-2 p {
+  font-size: 16px;
+  padding: 10px 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.vacancy-infos .info ul,
+.vacancy-infos .info-1 ul,
+.vacancy-infos .info-2 ul {
+  font-size: 16px;
+  padding-left: 50px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.vacancy-infos .info ul li,
+.vacancy-infos .info-1 ul li,
+.vacancy-infos .info-2 ul li {
+  padding: 5px 0px;
+}
+
+.vacancy-infos button {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  width: 180px;
+  background: #040e27;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin-left: 30px;
+  transition: 0.6s;
+  margin-top: 20px;
+}
+
+.vacancy-infos button:hover {
+  background-color: var(--green);
+  cursor: pointer;
+}
+/*Contact section*/
+.contact-banner {
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  width: 100%;
+}
+.contact-banner .bg {
+  height: 350px;
+  width: 100%;
+  background: url("images/banner/bradcam2.png"), no-repeat, left;
+  background-size: cover;
+}
+.contact-banner .bg .bg-shadow {
+  height: 350px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-banner .bg .bg-shadow .info {
+  margin-top: 50px;
+}
+
+.contact-banner .bg .bg-shadow .info h1 {
+  font-size: 52px;
+  padding: 10px 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.contact-banner .bg .bg-shadow .info p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.contact-form {
+  height: auto;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.contact-form h1 {
+  padding: 20px 0px 10px 10px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.contact-form p.heading {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.form-box {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-box p.description {
+  font-size: 18px;
+  text-align: start;
+  padding: 0px 0px 20px 10px;
+  font-weight: 400;
+  width: 700px;
+  letter-spacing: 0.5px;
+}
+.form-box form label {
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.form-box form label span {
+  margin-left: 5px;
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+}
+
+.form-box form {
+  width: 60%;
+}
+.form-box form .form-info {
+  flex-flow: row wrap;
+  display: flex;
+}
+.form-box form .form-info .form1 {
+  margin-right: 40px;
+}
+
+.form-box form input[type="text"],
+.form-box form input[type="email"],
+.form-box form input[type="number"] {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 40px;
+  width: 300px;
+  margin: 0px 10px 20px 10px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  outline: none;
+}
+.form-box form textarea {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+
+  border: 1px solid #cccccc;
+  outline: none;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.form-box form input[type="text"]:focus,
+.form-box form input[type="email"]:focus,
+.form-box form input[type="number"]:focus,
+.form-box form textarea:focus {
+  border: 1px solid #000;
+}
+
+.form-box form input[type="submit"] {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  height: 50px;
+  width: 150px;
+  background: #040e27;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  transition: 0.6s;
+}
+
+.form-box form input[type="submit"]:hover {
+  background: var(--green);
+  cursor: pointer;
+}
+
+.form-box .contact-box .contact-info {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px #ccc;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-box .contact-box .heading-1 {
+  font-size: 25px;
+  font-weight: 400;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.form-box .contact-box .contact-info i {
+  font-size: 30px;
+  padding: 10px 0px;
+  color: var(--green);
+}
+
+.form-box .contact-box .contact-info .info {
+  margin-left: 20px;
+}
+
+.form-box .contact-box .contact-info .info p {
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*Media Queries*/
+
+@media (max-width: 1100px) {
+  nav ul li a {
+    padding: 10px 5px;
+  }
+
+  .vacancy .vacancies .vacancy-info {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  /*navigation*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul {
+    display: block;
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: var(--background);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  nav ul li a {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    line-height: 40px;
+    padding: 8px 0px;
+    transition: 0.3s;
+    color: var(--green);
+  }
+
+  nav ul li a:hover {
+    border: none;
+    color: #fff;
+  }
+  nav .navbar-toggle {
+    display: block;
+  }
+  nav ul .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: var(--green);
+    visibility: visible;
+  }
+  nav .logo .company-logo img {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+  }
+
+  nav .logo .company-logo h1 {
+    position: absolute;
+    top: 7px;
+    left: 70px;
+    width: 350px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* homepageabout us*/
+  .About-us .container .about-container .about-img {
+    padding-left: 0px;
+  }
+  .About-us .container .about-container .about-info h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+  .About-us .container .about-container .about-info p.one {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .About-us .container .about-container .about-info p.two {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  /*homepage portfolio*/
+  .portfolio {
+    margin-top: 40px;
+  }
+  .portfolio .portfolio-area h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  /*about us section*/
+  .about-info .container .about-container .about-img {
+    padding-left: 0px;
+  }
+  .about-info .container .about-container .about-info h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+  .about-info .container .about-container .about-info p.one {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .about-info .container .about-container .about-info p.two {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  /*about us choose-us banner*/
+  .choose-us .container .choose-container .img img {
+    width: 100%;
+  }
+
+  /*portfolio section*/
+  .portfolio-gallery .gallery .gallery-box .gallery-container {
+    width: 50%;
+  }
+
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-box p.description {
+    text-align: center;
+  }
+
+  .form-box form {
+    width: 100%;
+  }
+
+  .form-box form .form-info {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0px 60px;
+  }
+  .form-box form input[type="submit"] {
+    margin-left: 70px;
+  }
+
+  /*people section*/
+  #team-profile .team-details {
+    padding: 0;
+  }
+  #team-profile .team-details .team-members .member-info {
+    margin-right: 10px;
+  }
+
+  /*career section*/
+  .vacancy .vacancies .vacancy-info .container {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .vacancy .vacancies .vacancy-info {
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  /*homepage slider*/
+  .slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info h3 {
+    font-size: 45px;
+    line-height: normal;
+    width: 650px;
+  }
+  /*homepage about*/
+  .About-us .container .about-container {
+    display: block;
+  }
+  .About-us .container .about-container .about-img {
+    width: 100%;
+    text-align: center;
+  }
+  .About-us .container .about-container .about-info {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /*homepage banner*/
+  .banner .container .bg-shadow h1 {
+    font-size: 28px;
+    padding: 0px 20px;
+    width: 500px;
+  }
+  footer .container .subscribe {
+    max-width: 100%;
+  }
+
+  /*about us section*/
+  .about-info .container .about-container {
+    display: block;
+  }
+
+  .about-info .container .about-container .about-img {
+    width: 100%;
+    text-align: center;
+  }
+  .about-info .container .about-container .about-info {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /*about-section features*/
+  .features .boxes .box .box-info {
+    width: 60%;
+  }
+
+  /*contact us*/
+  .form-box .contact-box {
+    margin-top: 30px;
+  }
+
+  .form-box form .form-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .form-box form .form-info input {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .form-box form .form-info textarea {
+    width: 100%;
+  }
+
+  /*people section*/
+  .team-profile .team-info .team-member {
+    height: 250px;
+    width: auto;
+  }
+
+  /*people section*/
+  #team-profile .info {
+    padding: 0px;
+  }
+  #team-profile .team-info {
+    padding: 0px;
+    margin-top: 10px;
+  }
+  #team-profile .team-details .team-members .member-info {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*career section*/
+  .career .info {
+    padding: 0px;
+  }
+  .vacancy .info {
+    padding: 0px;
+  }
+
+  /*vacancy section*/
+  .vacancy-details .info {
+    padding: 0px 20px;
+  }
+  .vacancy-details h1,
+  .vacancy-infos h1 {
+    font-size: 25px;
+  }
+  .vacancy-infos {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /*slider*/
+  .slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info h3 {
+    font-size: 35px;
+    line-height: normal;
+    width: 100%;
+  }
+
+  .slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info p {
+    padding: 0px 50px;
+  }
+  .About-us .container .about-container .about-info a {
+    margin-bottom: 20px;
+  }
+  .About-us .container .about-container .about-img {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    display: block;
+  }
+
+  .About-us .container .about-container .about-info {
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+  .portfolio {
+    margin-top: 20px;
+  }
+
+  .portfolio .load {
+    margin-bottom: 50px;
+  }
+  .banner .container {
+    height: 250px;
+  }
+  .banner .container .bg-shadow {
+    height: 250px;
+  }
+
+  footer {
+    position: relative;
+  }
+  footer .container {
+    display: block;
+  }
+  footer .container .about,
+  footer .container .links {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+  footer .container .links {
+    margin-left: 0px;
+  }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+
+  footer h6.counter {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+
+  /*about us section*/
+  .choose-us .container .choose-container {
+    display: block;
+  }
+
+  .choose-us .container .choose-container .img,
+  .choose-us .container .choose-container .choose-points {
+    width: 100%;
+  }
+
+  .portfolio-banner .bg .bg-shadow .info h1 {
+    font-size: 45px;
+  }
+  .portfolio-gallery .heading {
+    font-size: 25px !important;
+  }
+  .portfolio-gallery .gallery .gallery-box .gallery-container {
+    width: 100%;
+  }
+  .form-box {
+    display: block;
+  }
+  .form-box form {
+    display: block;
+  }
+
+  .form-box form p.description {
+    display: block;
+    width: 100%;
+    text-align: start;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  .form-box form .form-info {
+    display: block;
+    width: 100%;
+    text-align: start;
+  }
+  .form-box form textarea {
+    width: 100%;
+  }
+
+  /*people section*/
+  #team-profile h1 {
+    font-size: 25px;
+  }
+
+  /*career section*/
+  .career h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .About-us {
+    margin-top: 20px;
+  }
+  .About-us .container .about-container .about-info {
+    padding: 0px;
+    width: 100%;
+  }
+  .About-us .container .about-container .about-img img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .About-us .container .about-container .about-info h3 {
+    font-size: 20px;
+  }
+  .About-us .container .about-container .about-info p.one,
+  .About-us .container .about-container .about-info p.two {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .portfolio .portfolio-projects .project-gallery .project-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .portfolio .portfolio-area h1 {
+    font-size: 25px;
+  }
+
+  .banner .container .bg-shadow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .container .bg-shadow h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+
+  /*about-us*/
+  .about-info .container {
+    padding: 0px;
+  }
+
+  .about-info {
+    margin-top: 20px;
+  }
+  .about-info .container .about-container .about-img {
+    padding: 0px;
+  }
+  .about-info .container .about-container .about-info {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .about-info .container .about-container .about-info h3 {
+    font-size: 20px;
+  }
+  .about-info .container .about-container .about-info p.one,
+  .About-us .container .about-container .about-info p.two {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .about-banner .bg .bg-shadow .info h1 {
+    font-size: 42px;
+  }
+
+  .about-info .container .about-container .about-info a {
+    padding: 15px 30px;
+    margin-bottom: 30px;
+  }
+
+  .features .heading {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 0px 10px 0px;
+  }
+  .features .boxes {
+    display: block;
+    padding: 0px 40px;
+  }
+  .choose-us .heading {
+    font-size: 25px;
+    padding: 20px 0px 10px 0px;
+  }
+
+  .features .boxes .box .box-info {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+  }
+  .choose-us .container {
+    padding: 10px;
+  }
+  .choose-us .container .choose-container .img {
+    margin: 0px;
+  }
+  .choose-us .container .choose-container .choose-points p {
+    padding-left: 0px;
+  }
+
+  .choose-us .container .choose-container .choose-points h1 {
+    padding: 10px 0px;
+    font-size: 20px !important;
+  }
+
+  /*portfolio section*/
+  .portfolio-banner .bg .bg-shadow .info h1 {
+    font-size: 30px;
+  }
+
+  .portfolio-gallery .gallery .gallery-box .gallery-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .portfolio-gallery .gallery .gallery-box .gallery-container .overlay p {
+    padding: 10px 20px;
+  }
+
+  /*contact us*/
+  .contact-banner .bg .bg-shadow .info h1 {
+    font-size: 42px !important;
+  }
+
+  .form-box form p.description {
+    padding: 0px 10px;
+    font-size: 16px;
+  }
+  .form-box form .form-info {
+    display: block;
+    padding: 0px 10px;
+  }
+  .form-box form label {
+    font-size: 14px;
+  }
+
+  .form-box form input[type="submit"] {
+    margin-left: 20px;
+  }
+
+  #myBtn {
+    position: fixed;
+    padding: 8px;
+  }
+  /*homepage team section*/
+  .team .team-info .team-profile {
+    margin-right: 0px;
+  }
+  .team a {
+    margin-top: 20px;
+  }
+  .team .team-info {
+    display: flex;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  /*career section*/
+  .career h1 {
+    padding: 0;
+    font-size: 18px;
+  }
+  .career .info p.one,
+  .career p.two,
+  .career p.three {
+    font-size: 16px;
+  }
+  .vacancy h1 {
+    font-size: 20px !important;
+  }
+  .vacancy .info p.one {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /*vacancy section*/
+  .vacancy-details .info {
+    padding: 0px 0px;
+  }
+  .vacancy-details h1,
+  .vacancy-infos h1 {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  .vacancy-infos {
+    padding: 10px 0px;
+  }
+  .vacancy-details .info p.one,
+  .vacancy-details .info p.two {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  .vacancy-infos .info ul,
+  .vacancy-infos .info-1 ul,
+  .vacancy-infos .info-2 ul {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*navigation*/
+  nav {
+    width: auto;
+  }
+  .sticky {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    transition: all 0.1s;
+    height: 70px;
+    width: 100%;
+    padding: 0px 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+  nav .logo .company-logo img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+  }
+
+  nav .logo .company-logo h1 {
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    width: 280px;
+    font-size: 14px;
+  }
+
+  nav.sticky .logo .company-logo img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+  }
+
+  nav.sticky .logo .company-logo h1 {
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    width: 280px;
+    font-size: 14px;
+  }
+  nav .navbar-toggle {
+    font-size: 22px;
+    position: fixed;
+    top: 28px;
+    right: 20px;
+  }
+
+  nav.sticky .navbar-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+  }
+
+  .slider .swiper-container .swiper-slide .bg .bg-shadow .slider-info h3 {
+    font-size: 25px;
+    line-height: normal;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+  footer h1,
+  footer p {
+    font-size: 16px;
+  }
+
+  #team-profile h1 {
+    padding: 0;
+  }
+  #team-profile .team-info p.one,
+  #team-profile .team-info p.two,
+  #team-profile .team-info p.three {
+    line-height: 20px;
+  }
+  #team-profile .team-details {
+    justify-content: center;
+    align-items: center;
+  }
+  .form-box form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
